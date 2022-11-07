@@ -51,17 +51,17 @@ describe('swapTopTwoCards', () => {
 });
 
 describe('discardTopCard', () => {
-  test('from a deck with one card', () => {
+  xtest('from a deck with one card', () => {
     expect(discardTopCard([7])).toStrictEqual([7, []]);
   });
 
-  test('from a deck with many cards', () => {
+  xtest('from a deck with many cards', () => {
     expect(discardTopCard([9, 2, 10, 4])).toStrictEqual([9, [2, 10, 4]]);
   });
 });
 
 describe('insertFaceCards', () => {
-  test('into a deck with many cards', () => {
+  xtest('into a deck with many cards', () => {
     expect(insertFaceCards([3, 10, 7])).toStrictEqual([
       3,
       'jack',
@@ -72,11 +72,11 @@ describe('insertFaceCards', () => {
     ]);
   });
 
-  test('into a deck with one card', () => {
+  xtest('into a deck with one card', () => {
     expect(insertFaceCards([9])).toStrictEqual([9, 'jack', 'queen', 'king']);
   });
 
-  test('into a deck with no cards', () => {
+  xtest('into a deck with no cards', () => {
     expect(insertFaceCards([])).toStrictEqual([
       undefined,
       'jack',
