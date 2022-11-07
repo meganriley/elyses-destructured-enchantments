@@ -47,7 +47,8 @@ export function swapTopTwoCards(deck) {
  * deck and a new deck containing all the other cards
  */
 export function discardTopCard(deck) {
-  throw new Error('Implement the discardTopCard function');
+  let [first, ...restOfDeck] = deck;
+  return [first, restOfDeck]
 }
 
 /** @type Card[] **/
@@ -62,5 +63,8 @@ const FACE_CARDS = ['jack', 'queen', 'king'];
  * third, and fourth cards are the face cards
  */
 export function insertFaceCards(deck) {
-  throw new Error('Implement the insertFaceCards function');
+  let [first, ...restOfDeck] = deck;
+  let newDeck = restOfDeck
+  newDeck.unshift(first, 'jack', 'queen', 'king')
+  return newDeck;
 }
